@@ -5,8 +5,9 @@
  - Android SDK 32
  - buildToolsVersion "32.0.0"
  - gradle 7.2
- - NDK
- - CMAKE
+ - Android studio install SDK tools 
+   - NDK
+   - CMAKE
  - Valid API Key for [Newsapi.org](https://newsapi.org/)
 
 ## Getting Started
