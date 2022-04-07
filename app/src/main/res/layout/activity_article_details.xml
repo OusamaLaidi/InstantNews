@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp">
+
+        <ImageView
+            android:id="@+id/articleImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="#F9F9F9"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/articleSourceIcon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articleImage" />
+
+        <TextView
+            android:id="@+id/articleSource"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="sans-serif-regular"
+            android:maxWidth="100dp"
+            android:maxLines="1"
+            android:textColor="#9D9D9D"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/articleSourceIcon"
+            app:layout_constraintStart_toEndOf="@+id/articleSourceIcon"
+            app:layout_constraintTop_toTopOf="@+id/articleSourceIcon" />
+
+        <TextView
+            android:id="@+id/articleAuthor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-regular"
+            android:maxWidth="100dp"
+            android:maxLines="1"
+            android:textColor="#9D9D9D"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articleSource" />
+
+        <TextView
+            android:id="@+id/articleDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-regular"
+            android:maxWidth="100dp"
+            android:textColor="#9D9D9D"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/articleSource"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/articleTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articleAuthor" />
+
+        <TextView
+            android:id="@+id/articleDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-regular"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/articleTitle"
+            app:layout_constraintStart_toStartOf="@+id/articleTitle"
+            app:layout_constraintTop_toBottomOf="@+id/articleTitle" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-black"
+            android:textSize="16sp"
+            android:text="@string/news_detail_article_show_original"
+            android:onClick="openLink"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articleDescription" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

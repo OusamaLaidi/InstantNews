@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">InstantNews</string>
+    <string name="news_detail_article_show_original">Voir l\'article complet</string>
+    <string name="error_load_network">Oups! Erreur lors du chargement</string>
+    <string name="error_load_api">Aaaah! Quelque chose s\'est mal passé.</string>
+    <string name="error_api_unauthorized">Aaaah! Quelque chose s\'est mal passé.\n** API erreur: %1$s **</string>
+</resources>
