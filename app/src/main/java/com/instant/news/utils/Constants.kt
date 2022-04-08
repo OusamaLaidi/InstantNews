@@ -6,7 +6,7 @@ const val TAG = "InstantNewsTag"
 
 val API_AUTHORISATION_KEY = apiKey()
 const val API_BASE_URL = "https://newsapi.org"
-//const val API_BASE_URL = "http://192.168.1.2:4301"
+//const val API_BASE_URL = "http://127.0.0.1:8080"
 const val API_LISTING_PAGE_SIZE = 15
 
 
