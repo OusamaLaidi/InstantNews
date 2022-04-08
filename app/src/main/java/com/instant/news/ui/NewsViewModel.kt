@@ -13,7 +13,7 @@ import java.io.IOException
 const val ERROR_API: String = "api_error"
 const val ERROR_NETWORK: String = "api_network_error"
 
-class NewsViewModel(app: Application, private val newsRepository: NewsRepository):  AndroidViewModel(app){
+class NewsViewModel(private val newsRepository: NewsRepository):  ViewModel(){
     val newsLiveData: MutableLiveData<Resource<NewsApiResponse>> = MutableLiveData()
 
     private var stopPagination: Boolean=false
@@ -77,10 +77,9 @@ class NewsViewModel(app: Application, private val newsRepository: NewsRepository
 }
 
 class NewsViewModelProviderFactory(
-    private val app: Application,
     private val newsRepository: NewsRepository
 ) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return NewsViewModel(app, newsRepository) as T
+        return NewsViewModel( newsRepository) as T
     }
 }

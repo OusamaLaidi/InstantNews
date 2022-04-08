@@ -27,7 +27,7 @@ const val ARTICLE_DETAIL = "article_detail"
 class NewsActivity : AppCompatActivity() {
     private lateinit var newsAdapter: ArticleAdapter
     private val newsViewModel by viewModels<NewsViewModel> {
-        NewsViewModelProviderFactory(Application(), NewsRepository())
+        NewsViewModelProviderFactory( NewsRepository())
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
